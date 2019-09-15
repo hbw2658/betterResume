@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $('.wade').on('tap', () => {
-        $('.wade').toggleClass('focusCol1');
+    $('#wade').on('tap', () => {
+        $('#wade').toggleClass('focusCol1');
       });
 });
