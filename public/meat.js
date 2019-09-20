@@ -1,3 +1,28 @@
+//event handling below
+
+$(document).ready(() => {
+    $('#wade').on('click tap', (event) => {
+        $('#wade').addClass('popupCol1');
+        $('.vertical-rl').hide();
+        $('#wade .content').show();
+        $('#dates').addClass('engulf');
+        $('.sectionHeader').addClass('engulf');
+        $('.fullWidthButton').css('display', 'block');
+    });
+
+    $("button").on('click tap', () => {
+        $('#wade').removeClass('popupCol1');
+        $('.vertical-rl').toggle();
+        $('#wade .content').show();
+        $('#dates').toggleClass('engulf');
+        $('.sectionHeader').toggleClass('engulf');
+        $('.fullWidthButton').css('display', 'none');
+    });
+});
+
+
+//Constructor for filling in bubble below
+
 class Work {
     constructor(company, title, dates, description, skills) {
         this._company = company;
@@ -26,7 +51,7 @@ class Work {
     get skills() {
         return this._skills;
     }
-}
+};
 
 //col1
 const wwi = new Work('Wade-Wade I LLC', 'Property Manager', 'June 2019 - Current', 'Lorem Ipsum Doler', 'Product Photography, Communication, Copywriting, Paralegal');
@@ -46,4 +71,4 @@ const steammillOld = new Work('Blacksburg Steam Mill', 'Graphic Designer', 'Janu
 //col4
 const vaporwaveWorld = new Work('vaporwave.world', 'Designer', 'August 2019 - September 2019', 'Lorem Ipsum Doler', 'UI/UX Design, Web Development, HTML/CSS, JavaScript, Copywriting');
 const aeroprobeCorp = new Work('Aeroprobe Corporation', 'Graphic Designer', 'September 2017 - September 2019', 'Lorem Ipsum Doler', 'InDesign, Publishing, Illustrator, Photoshop, Layout Design, Product Photography, Video Production, Branding');
-const deliMart = new Work('Deli Mart Incorporated', 'Executive Assistant', 'January 2016 - May 2017','Lorem Ipsum Doler', 'skills')
+const deliMart = new Work('Deli Mart Incorporated', 'Executive Assistant', 'January 2016 - May 2017','Lorem Ipsum Doler', 'skills');

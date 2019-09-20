@@ -11,7 +11,7 @@ body {
     width: 100%;
 }
 
-#container {
+.container {
     margin: auto;
 }
 
@@ -75,28 +75,28 @@ body {
     float: left;
 }
 
-#workCol1 {
+.workCol1 {
     width: 22%;
     margin-right: 3%;
     float: left;
     position: relative;
 }
 
-#workCol2 {
+.workCol2 {
     width: 22%;
     margin-right: 3%;
     float: left;
 
 }
 
-#workCol3 {
+.workCol3 {
     width: 22%;
     margin-right: 3%;
     float: left;
 
 }
 
-#workCol4 {
+.workCol4 {
     width: 22%;
     float: left;
 
@@ -108,14 +108,14 @@ body {
     float: right;
 }
 
-#learnCol1 {
+.learnCol1 {
     width: 44%;
     margin-left: 5%;
     margin-right: 5%;
     float: left;
 }
 
-#learnCol2 {
+.learnCol2 {
     width: 44%;
     float: left;
 
@@ -127,36 +127,21 @@ body {
 
 #wade {
     height: 100px;
+    width: 100%;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
+    transition: transform ease-in 200ms, ease-out 200ms;
+    overflow: hidden;
 }
-
-.focusCol1 {
-    width: 510%;
-    height: 400px;
-    border-radius: 30px;
-    margin-top: 80px;
-    margin-left: 50px;
-    margin-bottom: 0;
-    outline: none;
-    box-shadow: 2px 0px 50px -5px rgba(69,69,69,0.76);
-    position: relative;
-    z-index: 90;
-}
-
-
-/* .focusCol1 p {
-    color: #4CD964;
-} */
-
 
 #morse {
     margin-top: 190px;
     height: 100px;
+    width: 100%;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
+    transition: width 300ms, height 150ms ease-in 200ms, ease-out 200ms;
+    overflow: hidden;
 }
 
 #ngi {
@@ -181,7 +166,9 @@ body {
     height: 100px;
     background-color: #5AC8FA;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
+    transition: width 300ms, height 150ms ease-in 200ms, ease-out 200ms;
+    overflow: hidden;
+    width: 100%;
 }
 
 #steinberg {
@@ -300,4 +287,59 @@ body {
     background-color: #FF9500;
     border-radius: 100px;
     transition: transform 300ms ease-in, .4s;
+}
+
+/* transition and popup land */
+
+.hidden {
+    display: none;
+}
+
+.fullWidthButton {
+    display: none;
+    width: 100%;
+    color: transparent;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    margin: 0% 0% -7% 0%;
+    padding: 0%;
+    position: absolute;
+    z-index: 1000;
+
+}
+
+
+#wade.popupCol1 {
+    width: 260px;
+    height: 450px;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69,69,69,0.76);
+    position: fixed;
+    z-index: 90;
+    transform: rotate(180deg);
+}
+
+.engulf {
+    filter: blur(1px);
+}
+
+.content  {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    display:  none;
+    transform: rotate(180deg);
+    margin-top: 50px;
+
+}
+
+.content p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 20px 20px 20px 20px;
+    font-size: 9.5pt;
 }
