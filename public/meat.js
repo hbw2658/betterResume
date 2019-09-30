@@ -1,7 +1,7 @@
 //event handling below
 
 $(document).ready(() => {
-    $('#wade').on('click tap', (event) => {
+    $('#wade').on('click touchstart', () => {
         $('#wade').addClass('popupCol1');
         $('.vertical-rl').hide();
         $('#wade .content').show();
@@ -10,7 +10,7 @@ $(document).ready(() => {
         $('.fullWidthButton').css('display', 'block');
     });
 
-    $("button").on('click tap', () => {
+    $("button").on('click touchstart', () => {
         $('#wade').removeClass('popupCol1');
         $('.vertical-rl').toggle();
         $('#wade .content').show();
