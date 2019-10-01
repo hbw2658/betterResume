@@ -1,24 +1,30 @@
 //event handling below
 
-$(document).ready(() => {
-    $('#wade').on('touchstart', () => {
-        $('#wade').addClass('popupCol1');
-        $('.vertical-rl').hide();
-        $('#wade .content').show();
-        $('#dates').addClass('engulf');
-        $('.sectionHeader').addClass('engulf');
-        $('.fullWidthButton').css('display', 'block');
-    });
 
-    $("button").on('touchstart', () => {
-        $('#wade').removeClass('popupCol1');
-        $('.vertical-rl').toggle();
-        $('#wade .content').show();
-        $('#dates').toggleClass('engulf');
-        $('.sectionHeader').toggleClass('engulf');
-        $('.fullWidthButton').css('display', 'none');
-    });
-});
+
+
+var backgroundClose = document.querySelector('.fullWidthButton');
+var wade = document.querySelector('.wade');
+
+wade.addEventListener('click', function(){
+    this.classList.remove('wade');
+    this.classList.add('popupCol1');
+    backgroundClose.classList.remove('hidden');
+    $('.verticalrl').hide();
+    $('.popupCol1 .content').show();
+    $('#dates').addClass('engulf');
+    $('.sectionHeader').addClass('engulf');   
+})
+
+backgroundClose.addEventListener('click', function() {
+    wade.classList.remove('popupCol1');
+    wade.classList.add('wade')
+    this.classList.add('hidden');
+    $('.verticalrl').show();
+    $('#dates').toggleClass('engulf');
+    $('.sectionHeader').toggleClass('engulf');
+})
+
 
 
 //Constructor for filling in bubble below

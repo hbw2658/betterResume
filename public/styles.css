@@ -48,7 +48,7 @@ body {
     color: #474747;
 }
 
-.vertical-rl {
+.verticalrl {
     writing-mode: vertical-rl;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -56,8 +56,8 @@ body {
     color: whitesmoke;
     position: relative;
     left: 30%;
-    background-color: none;
     margin: 0;
+    
 }
 
 
@@ -121,16 +121,19 @@ body {
 
 }
 
-
-
 /* for individual jobs */
 
-#wade {
+.bubble {
+    height: inherit;
+    transition: transform 300ms ease-in-out, .3s;
+
+}
+
+.wade {
     height: 100px;
     width: 100%;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: transform ease-in 200ms, ease-out 200ms;
     overflow: hidden;
 }
 
@@ -140,7 +143,6 @@ body {
     width: 100%;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: width 300ms, height 150ms ease-in 200ms, ease-out 200ms;
     overflow: hidden;
 }
 
@@ -149,7 +151,6 @@ body {
     height: 350px;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
 }
 
 #ecw {
@@ -157,7 +158,6 @@ body {
     height: 100px;
     background-color: #4CD964;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
 }
 
 
@@ -166,7 +166,6 @@ body {
     height: 100px;
     background-color: #5AC8FA;
     border-radius: 100px;
-    transition: width 300ms, height 150ms ease-in 200ms, ease-out 200ms;
     overflow: hidden;
     width: 100%;
 }
@@ -176,7 +175,6 @@ body {
     height: 200px;
     background-color: #5AC8FA;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
 }
 
 #coconaise {
@@ -184,7 +182,6 @@ body {
     height: 110px;
     background-color: #5AC8FA;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
 }
 
 #whiteraven {
@@ -192,7 +189,6 @@ body {
     height: 110px;
     background-color: #5AC8FA;
     border-radius: 100px;
-    transition: transform 150ms ease-in, .3s;
 }
 
 #steammill {
@@ -200,7 +196,6 @@ body {
     height: 270px;
     background-color: #007AFF;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #meld {
@@ -208,7 +203,6 @@ body {
     height: 250px;
     background-color: #007AFF;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #steammill2 {
@@ -216,14 +210,12 @@ body {
     height: 590px;
     background-color: #007AFF;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #vaporwave {
     height: 70px;
     background-color: #5856D6;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #aeroprobe {
@@ -231,7 +223,6 @@ body {
     height: 400px;
     background-color: #5856D6;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #deli {
@@ -239,7 +230,6 @@ body {
     height: 530px;
     background-color: #5856D6;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #uiux {
@@ -247,7 +237,6 @@ body {
     height: 160px;
     background-color: #FF3B30;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #german {
@@ -255,7 +244,6 @@ body {
     height: 280px;
     background-color: #FF3B30;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #nrcc {
@@ -263,14 +251,12 @@ body {
     height: 530px; 
     background-color: #FF3B30;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #javascript {
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #vproduction {
@@ -278,7 +264,6 @@ body {
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 #webbasics {
@@ -286,7 +271,6 @@ body {
     height: 320px;
     background-color: #FF9500;
     border-radius: 100px;
-    transition: transform 300ms ease-in, .4s;
 }
 
 /* transition and popup land */
@@ -296,29 +280,29 @@ body {
 }
 
 .fullWidthButton {
-    display: none;
     width: 100%;
-    color: transparent;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(55, 55, 55, 0.2);
+    height: 150%;
     border: none;
-    margin: 0% 0% -7% 0%;
+    margin-top: -250px;
     padding: 0%;
     position: absolute;
-    z-index: 99;
-
+    z-index: 90;
+    transition: ease-in-out, 400ms;
 }
 
 
-#wade.popupCol1 {
+.popupCol1 {
     width: 260px;
     height: 450px;
+    background-color: #4CD964;
     border-radius: 30px;
     left: 25%;
-    box-shadow: 2px 0px 50px -5px rgba(69,69,69,0.76);
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
     position: fixed;
     z-index: 100;
     transform: rotate(180deg);
+    overflow: hidden;
 }
 
 .engulf {
