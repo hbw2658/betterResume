@@ -1,32 +1,42 @@
 //event handling below
 
 var backgroundClose = document.querySelector('.fullWidthButton');
+var verticalText = document.getElementsByClassName('verticalrl');
+var dates = document.querySelector('#dates');
+var content = document.querySelectorAll('.content');
+var header = document.querySelectorAll('.sectionHeader');
 var wade = document.querySelector('.wade');
 
+//open wade bubble
 wade.addEventListener('click', function(){
     this.classList.remove('wade');
     this.classList.add('popupCol1');
+    content[0].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
     backgroundClose.classList.remove('hidden');
-    $(document).ready(function() {
-        $('.verticalrl').hide();
-        $('.popupCol1 .content').show();
-        $('#dates').addClass('engulf');
-        $('.sectionHeader').addClass('engulf'); 
-    })  
-})
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
 
-backgroundClose.addEventListener('click', function() {
-    wade.classList.remove('popupCol1');
-    wade.classList.add('wade')
-    this.classList.add('hidden');
-    $(document).ready(function() {
-        $('.verticalrl').show();
-        $('#dates').toggleClass('engulf');
-        $('.sectionHeader').toggleClass('engulf');
-    })
-})
+    //close bubble
+    backgroundClose.addEventListener('click', function() {
+        wade.classList.remove('popupCol1');
+        wade.classList.add('wade');
+        content[0].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
 
-//Constructor for filling in bubble below
+
+//constructor for filling in bubble below
 
 class Work {
     constructor(company, title, dates, description, skills) {
