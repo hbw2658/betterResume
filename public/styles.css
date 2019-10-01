@@ -135,8 +135,7 @@ body {
     border-radius: 100px;
     overflow: hidden;
 }
-
-#morse {
+.morse {
     margin-top: 190px;
     height: 100px;
     width: 100%;
@@ -145,22 +144,24 @@ body {
     overflow: hidden;
 }
 
-#ngi {
+.ngi {
     margin-top: 50px;
     height: 350px;
     background-color: #4CD964;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#ecw {
+.ecw {
     margin-top: 300px;
     height: 100px;
     background-color: #4CD964;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 
-#esb {
+.esb {
     margin-top: 80px;
     height: 100px;
     background-color: #5AC8FA;
@@ -169,103 +170,113 @@ body {
     width: 100%;
 }
 
-#steinberg {
+.steinberg {
     margin-top: 50px;
     height: 200px;
     background-color: #5AC8FA;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#coconaise {
+.coconaise {
     margin-top: 30px;
     height: 110px;
     background-color: #5AC8FA;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#whiteraven {
+.whiteraven {
     margin-top: 720px;
     height: 110px;
     background-color: #5AC8FA;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#steammill {
+.steammill {
     margin-top: 50px;
     height: 270px;
     background-color: #007AFF;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#meld {
+.meld {
     margin-top: 70px;
     height: 250px;
     background-color: #007AFF;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#steammill2 {
+.steammill2 {
     margin-top: 180px;
     height: 590px;
     background-color: #007AFF;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#vaporwave {
+.vaporwave {
     height: 70px;
     background-color: #5856D6;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#aeroprobe {
+.aeroprobe {
     margin-top: 320px;
     height: 400px;
     background-color: #5856D6;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#deli {
+.deli {
     margin-top: 90px;
     height: 530px;
     background-color: #5856D6;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#uiux {
+.uiux {
     margin-top: 120px;
     height: 160px;
     background-color: #FF3B30;
     border-radius: 100px;
+    overflow: hidden;
 }
 
-#german {
+.german {
     margin-top: 80px;
     height: 280px;
     background-color: #FF3B30;
     border-radius: 100px;
 }
 
-#nrcc {
+.nrcc {
     margin-top: 240px; 
     height: 530px; 
     background-color: #FF3B30;
     border-radius: 100px;
 }
 
-#javascript {
+.javascript {
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
 }
 
-#vproduction {
+.vproduction {
     margin-top: 40px;
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
 }
 
-#webbasics {
+.webbasics {
     margin-top: 90px;
     height: 320px;
     background-color: #FF9500;
@@ -281,7 +292,7 @@ body {
 .fullWidthButton {
     width: 100%;
     background-color: rgba(55, 55, 55, 0.2);
-    height: 150%;
+    height: 275%;
     border: none;
     margin-top: -250px;
     padding: 0%;
@@ -290,11 +301,75 @@ body {
     transition: ease-in-out, 400ms;
 }
 
-
 .popupCol1 {
     width: 260px;
     height: 450px;
     background-color: #4CD964;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
+    position: fixed;
+    z-index: 100;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.popupCol2 {
+    width: 260px;
+    height: 450px;
+    background-color: #5AC8FA;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
+    position: fixed;
+    z-index: 100;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.popupCol3 {
+    width: 260px;
+    height: 450px;
+    background-color: #007AFF;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
+    position: fixed;
+    z-index: 100;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.popupCol4 {
+    width: 260px;
+    height: 450px;
+    background-color: #5856D6;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
+    position: fixed;
+    z-index: 100;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.popupcol5 {
+    width: 260px;
+    height: 450px;
+    background-color: #FF3B30;
+    border-radius: 30px;
+    left: 25%;
+    box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
+    position: fixed;
+    z-index: 100;
+    transform: rotate(180deg);
+    overflow: hidden;
+}
+
+.popupcol6 {
+    width: 260px;
+    height: 450px;
+    background-color: #FF9500;
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
