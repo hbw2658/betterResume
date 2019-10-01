@@ -1,8 +1,5 @@
 //event handling below
 
-
-
-
 var backgroundClose = document.querySelector('.fullWidthButton');
 var wade = document.querySelector('.wade');
 
@@ -10,22 +7,24 @@ wade.addEventListener('click', function(){
     this.classList.remove('wade');
     this.classList.add('popupCol1');
     backgroundClose.classList.remove('hidden');
-    $('.verticalrl').hide();
-    $('.popupCol1 .content').show();
-    $('#dates').addClass('engulf');
-    $('.sectionHeader').addClass('engulf');   
+    $(document).ready(function() {
+        $('.verticalrl').hide();
+        $('.popupCol1 .content').show();
+        $('#dates').addClass('engulf');
+        $('.sectionHeader').addClass('engulf'); 
+    })  
 })
 
 backgroundClose.addEventListener('click', function() {
     wade.classList.remove('popupCol1');
     wade.classList.add('wade')
     this.classList.add('hidden');
-    $('.verticalrl').show();
-    $('#dates').toggleClass('engulf');
-    $('.sectionHeader').toggleClass('engulf');
+    $(document).ready(function() {
+        $('.verticalrl').show();
+        $('#dates').toggleClass('engulf');
+        $('.sectionHeader').toggleClass('engulf');
+    })
 })
-
-
 
 //Constructor for filling in bubble below
 
