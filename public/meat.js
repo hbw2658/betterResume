@@ -29,8 +29,8 @@ var uiux = document.querySelector('.uiux');
 var german = document.querySelector('.german');
 var nrcc = document.querySelector('.nrcc');
 
-var javascriptLearn = document.querySelector('.javascript');
-var videoProd = document.querySelector('.vproduction');
+var javascript = document.querySelector('.javascript');
+var vproduction = document.querySelector('.vproduction');
 var webBasics = document.querySelector('.webbasics');
 
 //open wade bubble
@@ -455,7 +455,7 @@ deli.addEventListener('click', function(){
 uiux.addEventListener('click', function(){
     this.classList.remove('uiux');
     this.classList.add('popupCol5');
-    bubble[14].style.marginTop = null;
+    bubble[14].style.marginTop = '0px';
     content[14].style.display = 'block';
     dates.classList.add('engulf');
     header[0].classList.add('engulf');
@@ -471,6 +471,156 @@ uiux.addEventListener('click', function(){
         uiux.classList.add('uiux');
         bubble[14].style.marginTop = null;
         content[14].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
+
+//open german bubble
+german.addEventListener('click', function(){
+    this.classList.remove('german');
+    this.classList.add('popupCol5');
+    bubble[15].style.marginTop = '-300px';
+    content[15].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
+    backgroundClose.classList.remove('hidden');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
+
+    //close german bubble
+    backgroundClose.addEventListener('click', function() {
+        german.classList.remove('popupCol5');
+        german.classList.add('german');
+        bubble[15].style.marginTop = null;
+        content[15].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
+
+//open nrcc bubble
+nrcc.addEventListener('click', function(){
+    this.classList.remove('nrcc');
+    this.classList.add('popupCol5');
+    bubble[16].style.marginTop = '-650px';
+    content[16].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
+    backgroundClose.classList.remove('hidden');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
+
+    //close nrcc bubble
+    backgroundClose.addEventListener('click', function() {
+        nrcc.classList.remove('popupCol5');
+        nrcc.classList.add('nrcc');
+        bubble[16].style.marginTop = null;
+        content[16].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
+
+//open javascript bubble
+javascript.addEventListener('click', function(){
+    this.classList.remove('javascript');
+    this.classList.add('popupCol6');
+    bubble[17].style.marginTop = '0px';
+    content[17].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
+    backgroundClose.classList.remove('hidden');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
+
+    //close javascript bubble
+    backgroundClose.addEventListener('click', function() {
+        javascript.classList.remove('popupCol6');
+        javascript.classList.add('javascript');
+        bubble[17].style.marginTop = null;
+        content[17].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
+
+//open vproduction bubble
+vproduction.addEventListener('click', function(){
+    this.classList.remove('vproduction');
+    this.classList.add('popupCol6');
+    bubble[18].style.marginTop = '-250px';
+    content[18].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
+    backgroundClose.classList.remove('hidden');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
+
+    //close vproduction bubble
+    backgroundClose.addEventListener('click', function() {
+        vproduction.classList.remove('popupCol6');
+        vproduction.classList.add('vproduction');
+        bubble[18].style.marginTop = null;
+        content[18].style.display = 'none';
+        this.classList.add('hidden');
+        dates.classList.remove('engulf');
+        header[0].classList.remove('engulf');
+        header[1].classList.remove('engulf');
+        for (var i = 0; i < verticalText.length; i += 1){
+            verticalText[i].style.display = 'block';
+        };
+    });
+});
+
+//open javascript bubble
+webBasics.addEventListener('click', function(){
+    this.classList.remove('webbasics');
+    this.classList.add('popupCol6');
+    bubble[19].style.marginTop = '-650px';
+    content[19].style.display = 'block';
+    dates.classList.add('engulf');
+    header[0].classList.add('engulf');
+    header[1].classList.add('engulf');
+    backgroundClose.classList.remove('hidden');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'none';
+    };
+
+    //close javascript bubble
+    backgroundClose.addEventListener('click', function() {
+        webBasics.classList.remove('popupCol6');
+        webBasics.classList.add('webbasics');
+        bubble[19].style.marginTop = null;
+        content[19].style.display = 'none';
         this.classList.add('hidden');
         dates.classList.remove('engulf');
         header[0].classList.remove('engulf');

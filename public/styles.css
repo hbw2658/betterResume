@@ -254,6 +254,7 @@ body {
     height: 280px;
     background-color: #FF3B30;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 .nrcc {
@@ -261,12 +262,14 @@ body {
     height: 530px; 
     background-color: #FF3B30;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 .javascript {
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 .vproduction {
@@ -274,6 +277,7 @@ body {
     height: 280px;
     background-color: #FF9500;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 .webbasics {
@@ -281,6 +285,7 @@ body {
     height: 320px;
     background-color: #FF9500;
     border-radius: 100px;
+    overflow: hidden;
 }
 
 /* transition and popup land */
@@ -349,11 +354,11 @@ body {
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
     position: fixed;
     z-index: 100;
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     overflow: hidden;
 }
 
-.popupcol5 {
+.popupCol5 {
     width: 260px;
     height: 450px;
     background-color: #FF3B30;
@@ -362,11 +367,11 @@ body {
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
     position: fixed;
     z-index: 100;
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     overflow: hidden;
 }
 
-.popupcol6 {
+.popupCol6 {
     width: 260px;
     height: 450px;
     background-color: #FF9500;
@@ -375,7 +380,7 @@ body {
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
     position: fixed;
     z-index: 100;
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     overflow: hidden;
 }
 
