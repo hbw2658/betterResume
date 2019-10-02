@@ -124,14 +124,14 @@ body {
 
 .bubble {
     height: inherit;
-    transition: transform 300ms ease-in-out, .3s;
+    transition: transform 450ms ease-in-out, .45s;
 
 }
 
 .wade {
     height: 100px;
     width: 100%;
-    background-color: #4CD964;
+    background-image: linear-gradient(to bottom, #57e26a, #3cbe30);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -139,7 +139,7 @@ body {
     margin-top: 190px;
     height: 100px;
     width: 100%;
-    background-color: #4CD964;
+    background-image: linear-gradient(to bottom, #57e26a, #3cbe30);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -147,7 +147,7 @@ body {
 .ngi {
     margin-top: 50px;
     height: 350px;
-    background-color: #4CD964;
+    background-image: linear-gradient(to bottom, #57e26a, #3cbe30);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -155,7 +155,7 @@ body {
 .ecw {
     margin-top: 300px;
     height: 100px;
-    background-color: #4CD964;
+    background-image: linear-gradient(to bottom, #57e26a, #3cbe30);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -164,7 +164,7 @@ body {
 .esb {
     margin-top: 80px;
     height: 100px;
-    background-color: #5AC8FA;
+    background-image: linear-gradient(to bottom, #4ac1f8, #366fda);
     border-radius: 100px;
     overflow: hidden;
     width: 100%;
@@ -173,7 +173,7 @@ body {
 .steinberg {
     margin-top: 50px;
     height: 200px;
-    background-color: #5AC8FA;
+    background-image: linear-gradient(to bottom, #4ac1f8, #366fda);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -181,7 +181,7 @@ body {
 .coconaise {
     margin-top: 30px;
     height: 110px;
-    background-color: #5AC8FA;
+    background-image: linear-gradient(to bottom, #4ac1f8, #366fda);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -189,7 +189,7 @@ body {
 .whiteraven {
     margin-top: 720px;
     height: 110px;
-    background-color: #5AC8FA;
+    background-image: linear-gradient(to bottom, #4ac1f8, #366fda);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -197,7 +197,7 @@ body {
 .steammill {
     margin-top: 50px;
     height: 270px;
-    background-color: #007AFF;
+    background-image: linear-gradient(to bottom, #2897e0, #1d4fda);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -205,7 +205,7 @@ body {
 .meld {
     margin-top: 70px;
     height: 250px;
-    background-color: #007AFF;
+    background-image: linear-gradient(to bottom, #2897e0, #1d4fda);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -213,14 +213,14 @@ body {
 .steammill2 {
     margin-top: 180px;
     height: 590px;
-    background-color: #007AFF;
+    background-image: linear-gradient(to bottom, #2897e0, #1d4fda);
     border-radius: 100px;
     overflow: hidden;
 }
 
 .vaporwave {
     height: 70px;
-    background-color: #5856D6;
+    background-image: linear-gradient(to bottom, #5653dd, #472a96);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -228,7 +228,7 @@ body {
 .aeroprobe {
     margin-top: 320px;
     height: 400px;
-    background-color: #5856D6;
+    background-image: linear-gradient(to bottom, #5653dd, #472a96);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -236,7 +236,7 @@ body {
 .deli {
     margin-top: 90px;
     height: 530px;
-    background-color: #5856D6;
+    background-image: linear-gradient(to bottom, #5653dd, #472a96);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -244,7 +244,7 @@ body {
 .uiux {
     margin-top: 120px;
     height: 160px;
-    background-color: #FF3B30;
+    background-image: linear-gradient(to bottom, #fc5b50, #d81233);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -252,7 +252,7 @@ body {
 .german {
     margin-top: 80px;
     height: 280px;
-    background-color: #FF3B30;
+    background-image: linear-gradient(to bottom, #fc5b50, #d81233);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -260,14 +260,14 @@ body {
 .nrcc {
     margin-top: 240px; 
     height: 530px; 
-    background-color: #FF3B30;
+    background-image: linear-gradient(to bottom, #fc5b50, #d81233);
     border-radius: 100px;
     overflow: hidden;
 }
 
 .javascript {
     height: 280px;
-    background-color: #FF9500;
+    background-image: linear-gradient(to bottom, #f89e21, #ff6600);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -275,7 +275,7 @@ body {
 .vproduction {
     margin-top: 40px;
     height: 280px;
-    background-color: #FF9500;
+    background-image: linear-gradient(to bottom, #f89e21, #ff6600);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -283,7 +283,7 @@ body {
 .webbasics {
     margin-top: 90px;
     height: 320px;
-    background-color: #FF9500;
+    background-image: linear-gradient(to bottom, #f89e21, #ff6600);
     border-radius: 100px;
     overflow: hidden;
 }
@@ -309,7 +309,7 @@ body {
 .popupCol1 {
     width: 260px;
     height: 450px;
-    background-color: #4CD964;
+    background-image: linear-gradient(to top left, #57e26a, #3cbe30);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
@@ -322,7 +322,7 @@ body {
 .popupCol2 {
     width: 260px;
     height: 450px;
-    background-color: #5AC8FA;
+    background-image: linear-gradient(to top left, #4ac1f8, #366fda);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
@@ -335,7 +335,7 @@ body {
 .popupCol3 {
     width: 260px;
     height: 450px;
-    background-color: #007AFF;
+    background-image: linear-gradient(to top left, #2897e0, #1d4fda);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
@@ -348,7 +348,7 @@ body {
 .popupCol4 {
     width: 260px;
     height: 450px;
-    background-color: #5856D6;
+    background-image: linear-gradient(to top left, #5653dd, #472a96);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
@@ -361,7 +361,7 @@ body {
 .popupCol5 {
     width: 260px;
     height: 450px;
-    background-color: #FF3B30;
+    background-image: linear-gradient(to top left, #fc5b50, #d81233);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
@@ -374,7 +374,7 @@ body {
 .popupCol6 {
     width: 260px;
     height: 450px;
-    background-color: #FF9500;
+    background-image: linear-gradient(to top left, #f89e21, #ff6600);
     border-radius: 30px;
     left: 25%;
     box-shadow: 2px 0px 50px -5px rgba(69, 69, 69, 0.75);
