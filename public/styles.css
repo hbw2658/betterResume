@@ -308,7 +308,7 @@ body {
 
 .popupCol1 {
     width: 260px;
-    height: 450px;
+    height: 500px;
     background-image: linear-gradient(to top left, #57e26a, #3cbe30);
     border-radius: 30px;
     left: 25%;
@@ -316,7 +316,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popupCol2 {
@@ -395,7 +395,6 @@ body {
     text-align: center;
     display:  none;
     transform: rotate(180deg);
-    margin-top: 50px;
 
 }
 
