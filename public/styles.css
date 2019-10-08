@@ -308,7 +308,7 @@ body {
 
 .popupCol1 {
     width: 260px;
-    height: 500px;
+    height: 450px;
     background-image: linear-gradient(to top left, #57e26a, #3cbe30);
     border-radius: 30px;
     left: 25%;
@@ -329,7 +329,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popupCol3 {
@@ -342,7 +342,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popupCol4 {
@@ -355,7 +355,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(-180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popupCol5 {
@@ -368,7 +368,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(-180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .popupCol6 {
@@ -381,7 +381,7 @@ body {
     position: fixed;
     z-index: 100;
     transform: rotate(-180deg);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .engulf {
@@ -395,6 +395,7 @@ body {
     text-align: center;
     display:  none;
     transform: rotate(180deg);
+    overflow: hidden;
 
 }
 
@@ -404,4 +405,13 @@ body {
     font-weight: 300;
     margin: 20px 20px 20px 20px;
     font-size: 9.5pt;
+}
+
+.contentGallery {
+    padding-bottom: 50px;
+}
+
+.contentGallery img {
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 0px rgba(69,69,69,0.75);
 }

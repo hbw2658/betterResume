@@ -6,6 +6,7 @@ var dates = document.querySelector('#dates');
 var content = document.querySelectorAll('.content');
 var header = document.querySelectorAll('.sectionHeader');
 var bubble = document.querySelectorAll('.bubble');
+var body = document.querySelector('body');
 
 var wade = document.querySelector('.wade');
 var morse = document.querySelector('.morse');
@@ -33,18 +34,35 @@ var javascript = document.querySelector('.javascript');
 var vproduction = document.querySelector('.vproduction');
 var webBasics = document.querySelector('.webbasics');
 
-//open wade bubble
-wade.addEventListener('click', function(){
-    this.classList.remove('wade');
-    this.classList.add('popupCol1');
-    content[0].style.display = 'block';
+//overarching callback functions 
+
+function openBubble() {
     dates.classList.add('engulf');
+    body.style.overflow = 'hidden';
     header[0].classList.add('engulf');
     header[1].classList.add('engulf');
     backgroundClose.classList.remove('hidden');
     for (var i = 0; i < verticalText.length; i += 1){
         verticalText[i].style.display = 'none';
     };
+};
+
+function closeBubble() {
+    dates.classList.remove('engulf');
+    body.style.overflow = 'auto';
+    header[0].classList.remove('engulf');
+    header[1].classList.remove('engulf');
+    for (var i = 0; i < verticalText.length; i += 1){
+        verticalText[i].style.display = 'block';
+    };
+};
+
+//open wade bubble
+wade.addEventListener('click', function(){
+    this.classList.remove('wade');
+    this.classList.add('popupCol1');
+    content[0].style.display = 'block';
+    openBubble();
 
     //close wade bubble
     backgroundClose.addEventListener('click', function() {
@@ -52,12 +70,7 @@ wade.addEventListener('click', function(){
         wade.classList.add('wade');
         content[0].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -68,12 +81,7 @@ morse.addEventListener('click', function(){
     bubble[1].style.marginTop = '-90px';
     content[1].style.display = 'block';
     dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close morse bubble
     backgroundClose.addEventListener('click', function() {
@@ -82,12 +90,7 @@ morse.addEventListener('click', function(){
         bubble[1].style.marginTop = null;
         content[1].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -97,13 +100,7 @@ ngi.addEventListener('click', function(){
     this.classList.add('popupCol1');
     bubble[2].style.marginTop = '-400px';
     content[2].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close ngi bubble
     backgroundClose.addEventListener('click', function() {
@@ -112,12 +109,7 @@ ngi.addEventListener('click', function(){
         bubble[2].style.marginTop = null;
         content[2].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -127,13 +119,7 @@ ecw.addEventListener('click', function(){
     this.classList.add('popupCol1');
     bubble[3].style.marginTop = '-800px';
     content[3].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close ecw bubble
     backgroundClose.addEventListener('click', function() {
@@ -142,12 +128,7 @@ ecw.addEventListener('click', function(){
         bubble[3].style.marginTop = null;
         content[3].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -157,13 +138,7 @@ esb.addEventListener('click', function(){
     this.classList.add('popupCol2');
     bubble[4].style.marginTop = '-20px';
     content[4].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close esb bubble
     backgroundClose.addEventListener('click', function() {
@@ -172,12 +147,7 @@ esb.addEventListener('click', function(){
         bubble[4].style.marginTop = null;
         content[4].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -187,13 +157,7 @@ steinberg.addEventListener('click', function(){
     this.classList.add('popupCol2');
     bubble[5].style.marginTop = '-200px';
     content[5].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close steinberg bubble
     backgroundClose.addEventListener('click', function() {
@@ -202,12 +166,7 @@ steinberg.addEventListener('click', function(){
         bubble[5].style.marginTop = null;
         content[5].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -217,13 +176,7 @@ coconaise.addEventListener('click', function(){
     this.classList.add('popupCol2');
     bubble[6].style.marginTop = '-450px';
     content[6].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close coconaise bubble
     backgroundClose.addEventListener('click', function() {
@@ -232,12 +185,7 @@ coconaise.addEventListener('click', function(){
         bubble[6].style.marginTop = null;
         content[6].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -247,13 +195,7 @@ whiteRaven.addEventListener('click', function(){
     this.classList.add('popupCol2');
     bubble[7].style.marginTop = '-600px';
     content[7].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close whiteraven bubble
     backgroundClose.addEventListener('click', function() {
@@ -262,12 +204,7 @@ whiteRaven.addEventListener('click', function(){
         bubble[7].style.marginTop = null;
         content[7].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -277,13 +214,7 @@ steammill.addEventListener('click', function(){
     this.classList.add('popupCol3');
     bubble[8].style.marginTop = '-20px';
     content[8].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close steammill bubble
     backgroundClose.addEventListener('click', function() {
@@ -292,12 +223,7 @@ steammill.addEventListener('click', function(){
         bubble[8].style.marginTop = null;
         content[8].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -307,13 +233,7 @@ meld.addEventListener('click', function(){
     this.classList.add('popupCol3');
     bubble[9].style.marginTop = '-300px';
     content[9].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close meld bubble
     backgroundClose.addEventListener('click', function() {
@@ -322,12 +242,7 @@ meld.addEventListener('click', function(){
         bubble[9].style.marginTop = null;
         content[9].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -337,13 +252,7 @@ steammill2.addEventListener('click', function(){
     this.classList.add('popupCol3');
     bubble[10].style.marginTop = '-650px';
     content[10].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close steammill second bubble
     backgroundClose.addEventListener('click', function() {
@@ -352,12 +261,7 @@ steammill2.addEventListener('click', function(){
         bubble[10].style.marginTop = null;
         content[10].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -367,13 +271,7 @@ vaporwave.addEventListener('click', function(){
     this.classList.add('popupCol4');
     bubble[11].style.marginTop = null;
     content[11].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close vaporwave second bubble
     backgroundClose.addEventListener('click', function() {
@@ -382,12 +280,7 @@ vaporwave.addEventListener('click', function(){
         bubble[11].style.marginTop = null;
         content[11].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -397,13 +290,7 @@ aeroprobe.addEventListener('click', function(){
     this.classList.add('popupCol4');
     bubble[12].style.marginTop = '-100px';
     content[12].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close aeroprobe second bubble
     backgroundClose.addEventListener('click', function() {
@@ -412,12 +299,7 @@ aeroprobe.addEventListener('click', function(){
         bubble[12].style.marginTop = null;
         content[12].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -427,13 +309,7 @@ deli.addEventListener('click', function(){
     this.classList.add('popupCol4');
     bubble[13].style.marginTop = '-800px';
     content[13].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close delimart bubble
     backgroundClose.addEventListener('click', function() {
@@ -442,12 +318,7 @@ deli.addEventListener('click', function(){
         bubble[13].style.marginTop = null;
         content[13].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -457,13 +328,7 @@ uiux.addEventListener('click', function(){
     this.classList.add('popupCol5');
     bubble[14].style.marginTop = '0px';
     content[14].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close uiux bubble
     backgroundClose.addEventListener('click', function() {
@@ -472,12 +337,7 @@ uiux.addEventListener('click', function(){
         bubble[14].style.marginTop = null;
         content[14].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -487,13 +347,7 @@ german.addEventListener('click', function(){
     this.classList.add('popupCol5');
     bubble[15].style.marginTop = '-300px';
     content[15].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close german bubble
     backgroundClose.addEventListener('click', function() {
@@ -502,12 +356,7 @@ german.addEventListener('click', function(){
         bubble[15].style.marginTop = null;
         content[15].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -517,13 +366,7 @@ nrcc.addEventListener('click', function(){
     this.classList.add('popupCol5');
     bubble[16].style.marginTop = '-650px';
     content[16].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close nrcc bubble
     backgroundClose.addEventListener('click', function() {
@@ -532,12 +375,7 @@ nrcc.addEventListener('click', function(){
         bubble[16].style.marginTop = null;
         content[16].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -547,13 +385,7 @@ javascript.addEventListener('click', function(){
     this.classList.add('popupCol6');
     bubble[17].style.marginTop = '0px';
     content[17].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close javascript bubble
     backgroundClose.addEventListener('click', function() {
@@ -562,12 +394,7 @@ javascript.addEventListener('click', function(){
         bubble[17].style.marginTop = null;
         content[17].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -577,13 +404,7 @@ vproduction.addEventListener('click', function(){
     this.classList.add('popupCol6');
     bubble[18].style.marginTop = '-250px';
     content[18].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close vproduction bubble
     backgroundClose.addEventListener('click', function() {
@@ -592,12 +413,7 @@ vproduction.addEventListener('click', function(){
         bubble[18].style.marginTop = null;
         content[18].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
 
@@ -607,13 +423,7 @@ webBasics.addEventListener('click', function(){
     this.classList.add('popupCol6');
     bubble[19].style.marginTop = '-650px';
     content[19].style.display = 'block';
-    dates.classList.add('engulf');
-    header[0].classList.add('engulf');
-    header[1].classList.add('engulf');
-    backgroundClose.classList.remove('hidden');
-    for (var i = 0; i < verticalText.length; i += 1){
-        verticalText[i].style.display = 'none';
-    };
+    openBubble();
 
     //close javascript bubble
     backgroundClose.addEventListener('click', function() {
@@ -622,11 +432,6 @@ webBasics.addEventListener('click', function(){
         bubble[19].style.marginTop = null;
         content[19].style.display = 'none';
         this.classList.add('hidden');
-        dates.classList.remove('engulf');
-        header[0].classList.remove('engulf');
-        header[1].classList.remove('engulf');
-        for (var i = 0; i < verticalText.length; i += 1){
-            verticalText[i].style.display = 'block';
-        };
+        closeBubble();
     });
 });
