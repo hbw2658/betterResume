@@ -63,6 +63,7 @@ wade.addEventListener('click', function(){
     this.classList.add('popupCol1');
     content[0].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close wade bubble
     backgroundClose.addEventListener('click', function() {
@@ -82,6 +83,7 @@ morse.addEventListener('click', function(){
     content[1].style.display = 'block';
     dates.classList.add('engulf');
     openBubble();
+    this.scrollTop = 1000;
 
     //close morse bubble
     backgroundClose.addEventListener('click', function() {
@@ -101,6 +103,7 @@ ngi.addEventListener('click', function(){
     bubble[2].style.marginTop = '-400px';
     content[2].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close ngi bubble
     backgroundClose.addEventListener('click', function() {
@@ -120,6 +123,7 @@ ecw.addEventListener('click', function(){
     bubble[3].style.marginTop = '-800px';
     content[3].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close ecw bubble
     backgroundClose.addEventListener('click', function() {
@@ -139,6 +143,7 @@ esb.addEventListener('click', function(){
     bubble[4].style.marginTop = '-20px';
     content[4].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close esb bubble
     backgroundClose.addEventListener('click', function() {
@@ -158,6 +163,7 @@ steinberg.addEventListener('click', function(){
     bubble[5].style.marginTop = '-200px';
     content[5].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close steinberg bubble
     backgroundClose.addEventListener('click', function() {
@@ -177,6 +183,7 @@ coconaise.addEventListener('click', function(){
     bubble[6].style.marginTop = '-450px';
     content[6].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close coconaise bubble
     backgroundClose.addEventListener('click', function() {
@@ -196,6 +203,7 @@ whiteRaven.addEventListener('click', function(){
     bubble[7].style.marginTop = '-600px';
     content[7].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close whiteraven bubble
     backgroundClose.addEventListener('click', function() {
@@ -215,6 +223,7 @@ steammill.addEventListener('click', function(){
     bubble[8].style.marginTop = '-20px';
     content[8].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close steammill bubble
     backgroundClose.addEventListener('click', function() {
@@ -234,6 +243,7 @@ meld.addEventListener('click', function(){
     bubble[9].style.marginTop = '-300px';
     content[9].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close meld bubble
     backgroundClose.addEventListener('click', function() {
@@ -253,6 +263,7 @@ steammill2.addEventListener('click', function(){
     bubble[10].style.marginTop = '-650px';
     content[10].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close steammill second bubble
     backgroundClose.addEventListener('click', function() {
@@ -272,6 +283,7 @@ vaporwave.addEventListener('click', function(){
     bubble[11].style.marginTop = null;
     content[11].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close vaporwave second bubble
     backgroundClose.addEventListener('click', function() {
@@ -291,6 +303,7 @@ aeroprobe.addEventListener('click', function(){
     bubble[12].style.marginTop = '-100px';
     content[12].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close aeroprobe second bubble
     backgroundClose.addEventListener('click', function() {
@@ -310,6 +323,7 @@ deli.addEventListener('click', function(){
     bubble[13].style.marginTop = '-800px';
     content[13].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close delimart bubble
     backgroundClose.addEventListener('click', function() {
@@ -329,6 +343,7 @@ uiux.addEventListener('click', function(){
     bubble[14].style.marginTop = '0px';
     content[14].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close uiux bubble
     backgroundClose.addEventListener('click', function() {
@@ -348,6 +363,7 @@ german.addEventListener('click', function(){
     bubble[15].style.marginTop = '-300px';
     content[15].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close german bubble
     backgroundClose.addEventListener('click', function() {
@@ -367,6 +383,7 @@ nrcc.addEventListener('click', function(){
     bubble[16].style.marginTop = '-650px';
     content[16].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close nrcc bubble
     backgroundClose.addEventListener('click', function() {
@@ -386,6 +403,7 @@ javascript.addEventListener('click', function(){
     bubble[17].style.marginTop = '0px';
     content[17].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close javascript bubble
     backgroundClose.addEventListener('click', function() {
@@ -405,6 +423,7 @@ vproduction.addEventListener('click', function(){
     bubble[18].style.marginTop = '-250px';
     content[18].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close vproduction bubble
     backgroundClose.addEventListener('click', function() {
@@ -424,6 +443,7 @@ webBasics.addEventListener('click', function(){
     bubble[19].style.marginTop = '-650px';
     content[19].style.display = 'block';
     openBubble();
+    this.scrollTop = 1000;
 
     //close javascript bubble
     backgroundClose.addEventListener('click', function() {
