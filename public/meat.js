@@ -1,4 +1,4 @@
-//event handling below
+//variable declerations
 
 var backgroundClose = document.querySelector('.fullWidthButton');
 var verticalText = document.getElementsByClassName('verticalrl');
@@ -9,6 +9,7 @@ var bubble = document.querySelectorAll('.bubble');
 var body = document.querySelector('body');
 
 var wade = document.querySelector('.wade');
+var marlow = document.querySelector('.marlow');
 var morse = document.querySelector('.morse');
 var ngi = document.querySelector('.ngi');
 var ecw = document.querySelector('.ecw');
@@ -16,6 +17,7 @@ var ecw = document.querySelector('.ecw');
 var esb = document.querySelector('.esb');
 var steinberg = document.querySelector('.steinberg');
 var coconaise = document.querySelector('.coconaise');
+var typeface = document.querySelector('.typeface');
 var whiteRaven = document.querySelector('.whiteraven');
 
 var steammill = document.querySelector('.steammill');
@@ -57,6 +59,8 @@ function closeBubble() {
     };
 };
 
+//event handling 
+
 //open wade bubble
 wade.addEventListener('click', function(){
     this.classList.remove('wade');
@@ -75,12 +79,32 @@ wade.addEventListener('click', function(){
     });
 });
 
+//open RLM bubble
+marlow.addEventListener('click', function(){
+    this.classList.remove('marlow');
+    this.classList.add('popupCol1');
+    bubble[1].style.marginTop = '-90px';
+    content[1].style.display = 'block';
+    openBubble();
+    this.scrollTop = 1000;
+
+    //close RLM bubble
+    backgroundClose.addEventListener('click', function() {
+        marlow.classList.remove('popupCol1');
+        marlow.classList.add('marlow');
+        bubble[1].style.marginTop = null;
+        content[1].style.display = 'none';
+        this.classList.add('hidden');
+        closeBubble();
+    });
+});
+
 //open morse bubble
 morse.addEventListener('click', function(){
     this.classList.remove('morse');
     this.classList.add('popupCol1');
-    bubble[1].style.marginTop = '-90px';
-    content[1].style.display = 'block';
+    bubble[2].style.marginTop = '-150px';
+    content[2].style.display = 'block';
     dates.classList.add('engulf');
     openBubble();
     this.scrollTop = 1000;
@@ -89,8 +113,8 @@ morse.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         morse.classList.remove('popupCol1');
         morse.classList.add('morse');
-        bubble[1].style.marginTop = null;
-        content[1].style.display = 'none';
+        bubble[2].style.marginTop = null;
+        content[2].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -100,8 +124,8 @@ morse.addEventListener('click', function(){
 ngi.addEventListener('click', function(){
     this.classList.remove('ngi');
     this.classList.add('popupCol1');
-    bubble[2].style.marginTop = '-400px';
-    content[2].style.display = 'block';
+    bubble[3].style.marginTop = '-400px';
+    content[3].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -109,8 +133,8 @@ ngi.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         ngi.classList.remove('popupCol1');
         ngi.classList.add('ngi');
-        bubble[2].style.marginTop = null;
-        content[2].style.display = 'none';
+        bubble[3].style.marginTop = null;
+        content[3].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -120,8 +144,8 @@ ngi.addEventListener('click', function(){
 ecw.addEventListener('click', function(){
     this.classList.remove('ecw');
     this.classList.add('popupCol1');
-    bubble[3].style.marginTop = '-800px';
-    content[3].style.display = 'block';
+    bubble[4].style.marginTop = '-800px';
+    content[4].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -129,8 +153,8 @@ ecw.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         ecw.classList.remove('popupCol1');
         ecw.classList.add('ecw');
-        bubble[3].style.marginTop = null;
-        content[3].style.display = 'none';
+        bubble[4].style.marginTop = null;
+        content[4].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -140,8 +164,8 @@ ecw.addEventListener('click', function(){
 esb.addEventListener('click', function(){
     this.classList.remove('esb');
     this.classList.add('popupCol2');
-    bubble[4].style.marginTop = '-20px';
-    content[4].style.display = 'block';
+    bubble[5].style.marginTop = '-20px';
+    content[5].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -149,8 +173,8 @@ esb.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         esb.classList.remove('popupCol2');
         esb.classList.add('esb');
-        bubble[4].style.marginTop = null;
-        content[4].style.display = 'none';
+        bubble[5].style.marginTop = null;
+        content[5].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -160,8 +184,8 @@ esb.addEventListener('click', function(){
 steinberg.addEventListener('click', function(){
     this.classList.remove('steinberg');
     this.classList.add('popupCol2');
-    bubble[5].style.marginTop = '-200px';
-    content[5].style.display = 'block';
+    bubble[6].style.marginTop = '-200px';
+    content[6].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -169,8 +193,8 @@ steinberg.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         steinberg.classList.remove('popupCol2');
         steinberg.classList.add('steinberg');
-        bubble[5].style.marginTop = null;
-        content[5].style.display = 'none';
+        bubble[6].style.marginTop = null;
+        content[6].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -180,8 +204,8 @@ steinberg.addEventListener('click', function(){
 coconaise.addEventListener('click', function(){
     this.classList.remove('coconaise');
     this.classList.add('popupCol2');
-    bubble[6].style.marginTop = '-450px';
-    content[6].style.display = 'block';
+    bubble[7].style.marginTop = '-450px';
+    content[7].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -189,8 +213,28 @@ coconaise.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         coconaise.classList.remove('popupCol2');
         coconaise.classList.add('coconaise');
-        bubble[6].style.marginTop = null;
-        content[6].style.display = 'none';
+        bubble[7].style.marginTop = null;
+        content[7].style.display = 'none';
+        this.classList.add('hidden');
+        closeBubble();
+    });
+});
+
+//open typeface bubble
+typeface.addEventListener('click', function(){
+    this.classList.remove('typeface');
+    this.classList.add('popupCol2');
+    bubble[8].style.marginTop = '-600px';
+    content[8].style.display = 'block';
+    openBubble();
+    this.scrollTop = 1000;
+
+    //close coconaise bubble
+    backgroundClose.addEventListener('click', function() {
+        typeface.classList.remove('popupCol2');
+        typeface.classList.add('typeface');
+        bubble[8].style.marginTop = null;
+        content[8].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -200,8 +244,8 @@ coconaise.addEventListener('click', function(){
 whiteRaven.addEventListener('click', function(){
     this.classList.remove('whiteRaven');
     this.classList.add('popupCol2');
-    bubble[7].style.marginTop = '-600px';
-    content[7].style.display = 'block';
+    bubble[9].style.marginTop = '-600px';
+    content[9].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -209,8 +253,8 @@ whiteRaven.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         whiteRaven.classList.remove('popupCol2');
         whiteRaven.classList.add('whiteraven');
-        bubble[7].style.marginTop = null;
-        content[7].style.display = 'none';
+        bubble[9].style.marginTop = null;
+        content[9].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -220,17 +264,17 @@ whiteRaven.addEventListener('click', function(){
 steammill.addEventListener('click', function(){
     this.classList.remove('steammill');
     this.classList.add('popupCol3');
-    bubble[8].style.marginTop = '-20px';
-    content[8].style.display = 'block';
+    bubble[10].style.marginTop = '-20px';
+    content[10].style.display = 'block';
     openBubble();
-    this.scrollTop = 1000;
+    this.scrollTop = 4000;
 
     //close steammill bubble
     backgroundClose.addEventListener('click', function() {
         steammill.classList.remove('popupCol3');
         steammill.classList.add('steammill');
-        bubble[8].style.marginTop = null;
-        content[8].style.display = 'none';
+        bubble[10].style.marginTop = null;
+        content[10].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -240,17 +284,17 @@ steammill.addEventListener('click', function(){
 meld.addEventListener('click', function(){
     this.classList.remove('meld');
     this.classList.add('popupCol3');
-    bubble[9].style.marginTop = '-300px';
-    content[9].style.display = 'block';
+    bubble[11].style.marginTop = '-300px';
+    content[11].style.display = 'block';
     openBubble();
-    this.scrollTop = 1000;
+    this.scrollTop = 4000;
 
     //close meld bubble
     backgroundClose.addEventListener('click', function() {
         meld.classList.remove('popupCol3');
         meld.classList.add('meld');
-        bubble[9].style.marginTop = null;
-        content[9].style.display = 'none';
+        bubble[11].style.marginTop = null;
+        content[11].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -260,17 +304,17 @@ meld.addEventListener('click', function(){
 steammill2.addEventListener('click', function(){
     this.classList.remove('steammill2');
     this.classList.add('popupCol3');
-    bubble[10].style.marginTop = '-650px';
-    content[10].style.display = 'block';
+    bubble[12].style.marginTop = '-650px';
+    content[12].style.display = 'block';
     openBubble();
-    this.scrollTop = 1000;
+    this.scrollTop = 10000;
 
-    //close steammill second bubble
+    //close vaporwave second bubble
     backgroundClose.addEventListener('click', function() {
         steammill2.classList.remove('popupCol3');
         steammill2.classList.add('steammill2');
-        bubble[10].style.marginTop = null;
-        content[10].style.display = 'none';
+        bubble[12].style.marginTop = null;
+        content[12].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -280,8 +324,8 @@ steammill2.addEventListener('click', function(){
 vaporwave.addEventListener('click', function(){
     this.classList.remove('vaporwave');
     this.classList.add('popupCol4');
-    bubble[11].style.marginTop = null;
-    content[11].style.display = 'block';
+    bubble[13].style.marginTop = null;
+    content[13].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -289,8 +333,8 @@ vaporwave.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         vaporwave.classList.remove('popupCol4');
         vaporwave.classList.add('vaporwave');
-        bubble[11].style.marginTop = null;
-        content[11].style.display = 'none';
+        bubble[13].style.marginTop = null;
+        content[13].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -300,8 +344,8 @@ vaporwave.addEventListener('click', function(){
 aeroprobe.addEventListener('click', function(){
     this.classList.remove('aeroprobe');
     this.classList.add('popupCol4');
-    bubble[12].style.marginTop = '-100px';
-    content[12].style.display = 'block';
+    bubble[14].style.marginTop = '-100px';
+    content[14].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -309,8 +353,8 @@ aeroprobe.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         aeroprobe.classList.remove('popupCol4');
         aeroprobe.classList.add('aeroprobe');
-        bubble[12].style.marginTop = null;
-        content[12].style.display = 'none';
+        bubble[14].style.marginTop = null;
+        content[14].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -320,8 +364,8 @@ aeroprobe.addEventListener('click', function(){
 deli.addEventListener('click', function(){
     this.classList.remove('deli');
     this.classList.add('popupCol4');
-    bubble[13].style.marginTop = '-800px';
-    content[13].style.display = 'block';
+    bubble[15].style.marginTop = '-800px';
+    content[15].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -329,8 +373,8 @@ deli.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         deli.classList.remove('popupCol4');
         deli.classList.add('deli');
-        bubble[13].style.marginTop = null;
-        content[13].style.display = 'none';
+        bubble[15].style.marginTop = null;
+        content[15].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -340,8 +384,8 @@ deli.addEventListener('click', function(){
 uiux.addEventListener('click', function(){
     this.classList.remove('uiux');
     this.classList.add('popupCol5');
-    bubble[14].style.marginTop = '0px';
-    content[14].style.display = 'block';
+    bubble[16].style.marginTop = '0px';
+    content[16].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -349,8 +393,8 @@ uiux.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         uiux.classList.remove('popupCol5');
         uiux.classList.add('uiux');
-        bubble[14].style.marginTop = null;
-        content[14].style.display = 'none';
+        bubble[16].style.marginTop = null;
+        content[16].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -360,8 +404,8 @@ uiux.addEventListener('click', function(){
 german.addEventListener('click', function(){
     this.classList.remove('german');
     this.classList.add('popupCol5');
-    bubble[15].style.marginTop = '-300px';
-    content[15].style.display = 'block';
+    bubble[17].style.marginTop = '-300px';
+    content[17].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -369,8 +413,8 @@ german.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         german.classList.remove('popupCol5');
         german.classList.add('german');
-        bubble[15].style.marginTop = null;
-        content[15].style.display = 'none';
+        bubble[17].style.marginTop = null;
+        content[17].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -380,8 +424,8 @@ german.addEventListener('click', function(){
 nrcc.addEventListener('click', function(){
     this.classList.remove('nrcc');
     this.classList.add('popupCol5');
-    bubble[16].style.marginTop = '-650px';
-    content[16].style.display = 'block';
+    bubble[18].style.marginTop = '-650px';
+    content[18].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -389,8 +433,8 @@ nrcc.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         nrcc.classList.remove('popupCol5');
         nrcc.classList.add('nrcc');
-        bubble[16].style.marginTop = null;
-        content[16].style.display = 'none';
+        bubble[18].style.marginTop = null;
+        content[18].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -400,8 +444,8 @@ nrcc.addEventListener('click', function(){
 javascript.addEventListener('click', function(){
     this.classList.remove('javascript');
     this.classList.add('popupCol6');
-    bubble[17].style.marginTop = '0px';
-    content[17].style.display = 'block';
+    bubble[19].style.marginTop = '0px';
+    content[19].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -409,8 +453,8 @@ javascript.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         javascript.classList.remove('popupCol6');
         javascript.classList.add('javascript');
-        bubble[17].style.marginTop = null;
-        content[17].style.display = 'none';
+        bubble[19].style.marginTop = null;
+        content[19].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
@@ -420,8 +464,8 @@ javascript.addEventListener('click', function(){
 vproduction.addEventListener('click', function(){
     this.classList.remove('vproduction');
     this.classList.add('popupCol6');
-    bubble[18].style.marginTop = '-250px';
-    content[18].style.display = 'block';
+    bubble[20].style.marginTop = '-250px';
+    content[20].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
@@ -429,28 +473,28 @@ vproduction.addEventListener('click', function(){
     backgroundClose.addEventListener('click', function() {
         vproduction.classList.remove('popupCol6');
         vproduction.classList.add('vproduction');
-        bubble[18].style.marginTop = null;
-        content[18].style.display = 'none';
+        bubble[20].style.marginTop = null;
+        content[20].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
 });
 
-//open javascript bubble
+//open html bubble
 webBasics.addEventListener('click', function(){
     this.classList.remove('webbasics');
     this.classList.add('popupCol6');
-    bubble[19].style.marginTop = '-650px';
-    content[19].style.display = 'block';
+    bubble[21].style.marginTop = '-650px';
+    content[21].style.display = 'block';
     openBubble();
     this.scrollTop = 1000;
 
-    //close javascript bubble
+    //close html bubble
     backgroundClose.addEventListener('click', function() {
         webBasics.classList.remove('popupCol6');
         webBasics.classList.add('webbasics');
-        bubble[19].style.marginTop = null;
-        content[19].style.display = 'none';
+        bubble[21].style.marginTop = null;
+        content[21].style.display = 'none';
         this.classList.add('hidden');
         closeBubble();
     });
